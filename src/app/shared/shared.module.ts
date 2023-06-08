@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MainShellComponent } from './layout/main-shell/main-shell.component';
 import { RouterModule } from "@angular/router";
 import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
+import { UserProfileComponent } from './layout/user-profile/user-profile.component';
 
 @NgModule({
     imports:[CommonModule,MaterialModule,RouterModule
@@ -34,7 +35,8 @@ import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
     SidebarComponent,
     SideNavbarComponent,
     HomeComponent,
-    MainShellComponent
+    MainShellComponent,
+    UserProfileComponent
   ]
 })
 export class SharedModule{}

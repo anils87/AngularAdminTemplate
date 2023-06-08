@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  sidenavWidth = 6;  
+  sidenavWidth = 15;  
+
+  showHide(flag:Boolean){
+    if(flag)
+      this.increase();
+    else
+      this.decrease();
+  }
   increase() {
 		this.sidenavWidth = 15;		
 	}

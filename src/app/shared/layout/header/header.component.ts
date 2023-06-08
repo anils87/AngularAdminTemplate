@@ -8,7 +8,7 @@ import { filter, startWith } from 'rxjs';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  componentTitle: string='';
+  componentTitle: string='Application Name';
   
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
    

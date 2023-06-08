@@ -19,7 +19,19 @@
     "children": [{
             "text": "Category",
             "icon": "category",
-            "routerLink": "/product/category"
+            "routerLink": "/product/category",
+            "children":[
+                {
+                    "text": "Category 1",
+                    "icon": "category1",
+                    "routerLink": "/product/category1"
+                },
+                {
+                    "text": "Category 2",
+                    "icon": "category2",
+                    "routerLink": "/product/category2"
+                }
+            ]
         },
         {
             "text": "Sub Category",

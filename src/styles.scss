@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import 'material-icons/iconfont/material-icons.scss';
+@import './assets/scss/sidebar';
+@import './assets/scss/layout';
+
 html, body { height: 100%; }
 body { 
     margin: 0; 
@@ -7,3 +11,40 @@ body {
     font-family: Rubik,"Helvetica Neue", sans-serif; 
 
 }
+.example-full-width{
+    width:100%;
+}
+.mat-mdc-form-field{
+    width:100%;
+}
+.row{
+    padding:2px;
+}
+.mat-mdc-raised-button{
+    margin-top:2px;
+}
+.logo{
+    width:120px;
+    height:120px;
+    //position: relative;
+}
+.table-search{
+    line-height: 15px;
+    max-width:250px;
+}
+
+.mat-mdc-tab-list .mat-mdc-tab-labels .mdc-tab--active {    
+    background-color: green;
+    border-radius: 5px;
+    }
+    .mat-mdc-tab .mdc-tab__text-label{
+        color:red;
+    }
+    .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label{
+        color:white;
+    }
+.mat-mdc-tab-list .mat-mdc-tab-labels {
+    //color:white;
+    background-color: yellow;
+    border-radius: 5px;
+    }

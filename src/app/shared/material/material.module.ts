@@ -41,6 +41,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { MatTableResponsiveModule } from '../directives/mat-table-responsive/mat-table-responsive.module';
 
 @NgModule({
   exports: [
@@ -86,7 +87,8 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MatTreeModule,
     OverlayModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    MatTableResponsiveModule
   ]
 })
 export class MaterialModule { }

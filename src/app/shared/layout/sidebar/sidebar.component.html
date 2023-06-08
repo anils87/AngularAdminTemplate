@@ -1,19 +1,11 @@
-<div class="sidebar-container">
-    <mat-toolbar color="primary" class="sidebar-toolbar">      
-      <h1 class="sidebar-app-name">Application Name</h1>
-      <button mat-icon-button (click)="snav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <app-header></app-header>
-    </mat-toolbar>
-    <mat-sidenav-container class="sidebar-sidenav-container">
+<div class="sidebar-container">    
+    <app-header></app-header>    
+    <mat-sidenav-container class="sidebar-sidenav-container" autosize="true">
       <mat-sidenav #snav mode="side" 
       fixedTopGap="56" opened="true" 
-      [ngStyle]="{ 'width.em': sidenavWidth }"
-        (mouseenter)="increase()"
-      (mouseleave)="decrease()"
+      [ngStyle]="{ 'width.em': sidenavWidth }"        
       >
-        <app-side-navbar [sidenavWidth]="sidenavWidth"></app-side-navbar>
+        <app-side-navbar (toggleMenu)="showHide($event)" [sidenavWidth]="sidenavWidth"></app-side-navbar>
       </mat-sidenav>
       <mat-sidenav-content class="router-container">
         <router-outlet></router-outlet>

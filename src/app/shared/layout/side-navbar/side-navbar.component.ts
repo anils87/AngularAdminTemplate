@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IMenu } from '../../core/interfaces/imenu';
 import { MenuService } from '../../core/services/menu-service.service';
@@ -10,7 +10,8 @@ import { MenuService } from '../../core/services/menu-service.service';
 })
 export class SideNavbarComponent {
   menuList: Observable<IMenu[]> = new Observable<IMenu[]>();
-  @Input() sidenavWidth=1;
+  @Input() sidenavWidth=15;
+  @Output() toggleMenu = new EventEmitter<boolean>();
   constructor(private httpService: MenuService) { }
 
   ngOnInit() {

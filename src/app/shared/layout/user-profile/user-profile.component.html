@@ -1,0 +1,14 @@
+<button mat-button [mat-menu-trigger-for]="menu" aria-label="Expand the user options">
+    <mat-icon>person</mat-icon>&nbsp; UserName
+    <mat-icon iconPositionEnd>expand_more</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>
+        <mat-icon mat-list-icon>settings</mat-icon>
+        <span>Settins</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon mat-list-icon>settings_power</mat-icon>
+        <span>Logout</span>
+    </button>
+</mat-menu>
