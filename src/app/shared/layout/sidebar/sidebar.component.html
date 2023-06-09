@@ -1,11 +1,18 @@
-<div class="sidebar-container">    
+<div class="sidebar-container">
+  <!-- <button mat-icon-button *ngIf="snav.mode === 'over'" (click)="snav.toggle()">
+    <mat-icon *ngIf="!snav.opened">menu</mat-icon>
+    <mat-icon *ngIf="snav.opened">close</mat-icon>
+  </button>  -->
     <app-header></app-header>    
     <mat-sidenav-container class="sidebar-sidenav-container" autosize="true">
-      <mat-sidenav #snav mode="side" 
-      fixedTopGap="56" opened="true" 
-      [ngStyle]="{ 'width.em': sidenavWidth }"        
+      <!-- <mat-sidenav #snav mode="side"
+      fixedTopGap="56" opened="true"
+      [ngStyle]="{ 'width.em': sidenavWidth }"
       >
         <app-side-navbar (toggleMenu)="showHide($event)" [sidenavWidth]="sidenavWidth"></app-side-navbar>
+      </mat-sidenav> -->
+      <mat-sidenav #snav fixedTopGap="56" >
+        <app-side-navbar (toggleMenu)="showHide($event)" [sidenavWidth]="sidenavWidth" [inputSideNav]="sidenav"></app-side-navbar>
       </mat-sidenav>
       <mat-sidenav-content class="router-container">
         <router-outlet></router-outlet>

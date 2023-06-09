@@ -1,8 +1,18 @@
-<ng-container>
+<!-- <ng-container>
     <mat-icon *ngIf="sidenavWidth==15" title="Collapse" style="float: right;" 
     (click)="toggleMenu.emit(false);" mat-list-icon>keyboard_arrow_left</mat-icon>
     <mat-icon *ngIf="sidenavWidth!=15" title="Expand" style="float: right;" 
     (click)="toggleMenu.emit(true);" mat-list-icon>keyboard_arrow_right</mat-icon>    
+</ng-container> -->
+<ng-container>
+    <button mat-icon-button *ngIf="mode === 'over'" (click)="toggle()">
+        <mat-icon *ngIf="!opened">menu</mat-icon>
+        <mat-icon *ngIf="opened">close</mat-icon>
+      </button>
+    <!-- <mat-icon *ngIf="sidenavWidth==15" title="Collapse" style="float: right;" 
+    (click)="toggleMenu.emit(false);" mat-list-icon>keyboard_arrow_left</mat-icon>
+    <mat-icon *ngIf="sidenavWidth!=15" title="Expand" style="float: right;" 
+    (click)="toggleMenu.emit(true);" mat-list-icon>keyboard_arrow_right</mat-icon>     -->
 </ng-container>
 <mat-nav-list class="side-navnar">
     <ng-container *ngFor="let menu of menuList | async; index as i;">

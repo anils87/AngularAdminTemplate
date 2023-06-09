@@ -1,6 +1,10 @@
 <mat-toolbar class="sidebar-toolbar">
     <mat-toolbar-row>
-        <a href="#">Logo Here</a>
+        <a href="#"><img src="../../../../assets/img/company-logo.png" class="logo" ></a>
+        <button mat-icon-button *ngIf="mode === 'over'" (click)="toggle()">
+            <mat-icon *ngIf="!isOpened">menu</mat-icon>
+            <mat-icon *ngIf="isOpened">close</mat-icon>
+          </button>
         <div style="width:55px;"></div>
         <div class="header-page-title">
             <span>{{componentTitle}}</span>    
@@ -8,5 +12,8 @@
         <span class="header-user-profile"></span>
         <span class="header-user-profile"></span>
         <app-user-profile align="right"></app-user-profile>
+        <ng-container>
+            {{mode}} - {{isOpened}}
+        </ng-container> 
     </mat-toolbar-row>
 </mat-toolbar>
