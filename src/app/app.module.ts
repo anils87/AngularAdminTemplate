@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { CustomerComponent } from './customer/customer.component';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatDataTableComponent } from './mat-data-table/mat-data-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent
+    CustomerComponent,
+    DataTableComponent,
+    MatDataTableComponent
   ],
   imports: [
     BrowserModule,
