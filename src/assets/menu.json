@@ -1,30 +1,35 @@
 [{
     "text": "Dashboard",
-    "icon": "dashboard",
+    "icon": "home",
     "routerLink": "/"
 },
 {
-    "text": "Customer",
-    "icon": "people",
-    "routerLink": "customer"
+    "text": "Simple Data Table",
+    "icon": "dashboard",
+    "routerLink": "data-table"
 },
 {
-    "text": "Supplier",
-    "icon": "supervised_user_circle",
-    "routerLink": "/supplier/manage"
+    "text": "Mat Data Table",
+    "icon": "apps",
+    "routerLink": "mat-table"
 },
 {
-    "text": "Suit",
+    "text": "Product",
+    "icon": "shopping_cart",
+    "routerLink": "product"
+},
+{
+    "text": "Forms",
     "icon": "inventory_2",
     "children": [{
-            "text": "Category",
+            "text": "Layout",
             "icon": "category",
-            "routerLink": "/product/category",
+            "routerLink": "forms",
             "children":[
                 {
-                    "text": "Category 1",
+                    "text": "Form Layout",
                     "icon": "category1",
-                    "routerLink": "/product/category1"
+                    "routerLink": "forms/responsive-layout"
                 },
                 {
                     "text": "Category 2",
@@ -34,9 +39,9 @@
             ]
         },
         {
-            "text": "Sub Category",
-            "icon": "layers",
-            "routerLink": "/product/sub-category"
+            "text": "File Upload",
+            "icon": "upload",
+            "routerLink": "/product/file-upload"
         },
         {
             "text": "Product",
@@ -46,58 +51,20 @@
     ]
 },
 {
-    "text": "Expense",
-    "icon": "inventory_2",
-    "children": [{
-            "text": "Category",
-            "icon": "category",
-            "routerLink": "/product/category"
-        },
-        {
-            "text": "Manage Expense",
-            "icon": "layers",
-            "routerLink": "/product/sub-category"
-        },
-        {
-            "text": "Statement",
-            "icon": "all_inbox",
-            "routerLink": "/product/manage"
-        }
-    ]
-},
-{
-    "text": "Purchases",
-    "icon": "receipt",
-    "children": [{
-            "text": "New Purchases",
-            "icon": "local_atm",
-            "routerLink": "/purchases/new"
-        },
-        {
-            "text": "Purchases History",
-            "icon": "history",
-            "routerLink": "/purchases/history"
-        }
-    ]
-},
-{
-    "text": "Sales",
-    "icon": "calculate",
-    "children": [{
-            "text": "New Sales",
-            "icon": "point_of_sale",
-            "routerLink": "/sales/add"
-        },
-        {
-            "text": "Sales History",
-            "icon": "history",
-            "routerLink": "/sales/history"
-        }
-    ]
-},
-{
     "text": "Report",
     "icon": "analytics",
-    "routerLink": "/reports"
-}
+    "children": [{
+            "text": "Pie Chart",
+            "icon": "pie_chart",
+            "routerLink": "/report/pie-chart",
+            "children":[]
+        },
+        {
+            "text": "Bar Chart",
+            "icon": "bar_chart",
+            "routerLink": "/product/sub-category",
+            "children":[]
+        }
+    ]
+    }
 ]

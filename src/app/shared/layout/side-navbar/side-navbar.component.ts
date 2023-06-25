@@ -14,9 +14,11 @@ export class SideNavbarComponent {
   menuList: Observable<IMenu[]> = new Observable<IMenu[]>();
   @Input() sidenavWidth=15;
   @Output() toggleMenu = new EventEmitter<boolean>();
+  @Output() isActiveChange = new EventEmitter<boolean>();
   @Input() inputSideNav!: MatSidenav;
   mode:any;
   opened:any;
+  subMenuPath:string='';
   constructor(private httpService: MenuService,private _layoutService:LayoutService) { 
     
   }
@@ -32,5 +34,9 @@ export class SideNavbarComponent {
   }
   toggle(){
     this._layoutService.toggle();
+  }
+  getSubMenuAbsolutePath(){
+    const url= document.location.pathname;
+    this.subMenuPath = url.split('/').at(1)?.toString()!;
   }
 }

@@ -15,7 +15,7 @@ export class HeaderComponent {
   constructor(private router: Router, private activatedRoute: ActivatedRoute,private _layoutService:LayoutService) {   
     this.router.events.subscribe(data => {
       if (data instanceof ActivationStart) {
-        this.componentTitle = data.snapshot.data['title'];
+        //this.componentTitle = data.snapshot.data['title'];
       }
 
     });
@@ -39,7 +39,7 @@ this._layoutService.refreshService.subscribe((res)=>{
     this.router.events.subscribe(data => {
       if (data instanceof ActivationStart) {
          console.log(data)
-        this.componentTitle = data.snapshot.data['title'];
+        //this.componentTitle = data.snapshot.data['title'];
       }
 
     });

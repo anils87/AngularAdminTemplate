@@ -29,8 +29,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "bootstrap/dist/css/bootstrap.min.css", 
+            "styles": [              
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],

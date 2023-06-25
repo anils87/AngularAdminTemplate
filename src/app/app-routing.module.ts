@@ -5,6 +5,8 @@ import { HomeComponent } from './shared/components/home/home.component';
 import { MainShellComponent } from './shared/layout/main-shell/main-shell.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { MatDataTableComponent } from './mat-data-table/mat-data-table.component';
+import { ResponsiveLayoutComponent } from './components/responsive-layout/responsive-layout.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {
@@ -12,17 +14,27 @@ const routes: Routes = [
     component: MainShellComponent,
     children: [
       {
-        path:'customer',
-        component:CustomerComponent
+        path:'home',
+        component:HomeComponent
+      }, {
+        path:'data-table',
+        component:DataTableComponent
       },
       {
-        path:'home',
+        path:'mat-table',
         component:MatDataTableComponent
       },
       {
+        path:'product',
+        component:ProductsComponent
+      },
+      {
+        path:'forms/responsive-layout',
+        component:ResponsiveLayoutComponent
+      },
+      {
         path: '', pathMatch: 'full',
-        //component: HomeComponent
-        component: DataTableComponent
+        component: HomeComponent        
       }]
   }]
 

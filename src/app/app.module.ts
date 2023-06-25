@@ -7,13 +7,17 @@ import { SharedModule } from './shared/shared.module';
 import { CustomerComponent } from './customer/customer.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { MatDataTableComponent } from './mat-data-table/mat-data-table.component';
+import { ResponsiveLayoutComponent } from './components/responsive-layout/responsive-layout.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerComponent,
     DataTableComponent,
-    MatDataTableComponent
+    MatDataTableComponent,
+    ResponsiveLayoutComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

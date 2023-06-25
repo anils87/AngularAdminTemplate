@@ -3,6 +3,7 @@
 @import 'material-icons/iconfont/material-icons.scss';
 @import './assets/scss/sidebar';
 @import './assets/scss/layout';
+@import './assets/scss/responsivelayout';
 
 html, body { height: 100%; }
 body { 
@@ -17,16 +18,9 @@ body {
 .mat-mdc-form-field{
     width:100%;
 }
-.row{
-    padding:2px;
-}
+
 .mat-mdc-raised-button{
     margin-top:2px;
-}
-.logo{
-    width:100px;
-    height:100px;
-    //position: relative;
 }
 .table-search{
     line-height: 15px;
