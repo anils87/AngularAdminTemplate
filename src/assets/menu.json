@@ -41,7 +41,7 @@
         {
             "text": "File Upload",
             "icon": "upload",
-            "routerLink": "/product/file-upload"
+            "routerLink": "file-upload"
         },
         {
             "text": "Product",

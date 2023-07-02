@@ -1,0 +1,17 @@
+<button mat-raised-button color="primary" (click)="onClick($event)"><mat-icon>add</mat-icon>{{chooseLabel}}</button>
+<input #fileUpload type="file" class="input_fileupload_hidden" 
+(change)="OnFileSelect($event)" [accept]="accept">
+<mat-chip-row *ngFor="let file of files" class="chip-action-label">
+<span>{{file.name}}</span>
+<button mat-icon-button color="primary" [attr.title]="deleteLabel?deleteLabel:null"
+(click)="onRemoveFile($event,file)"><mat-icon>close</mat-icon></button>
+</mat-chip-row>
+<ng-container *ngIf="this.files.length>0">
+<button mat-raised-button color="primary" (click)="previewData()"><mat-icon>preview</mat-icon>{{previewLabel}}</button>
+</ng-container>
+<ng-container *ngIf="invalidFileSizeMessageSummary.length>0">
+    <br><span class="error">{{invalidFileSizeMessageSummary}}</span>
+</ng-container>
+<ng-container *ngIf="invalidFileTypeMessageDetail.length>0">
+    <br><span  class="error">{{invalidFileTypeMessageDetail}}</span>
+</ng-container>

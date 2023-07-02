@@ -19,4 +19,59 @@
       <div class="col-4">33% width</div>
       <div class="col-4">33% width</div>      
     </div>
+    <div class="row">    
+      <div class="col-4">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input type="text" matInput  placeholder="Enter First Name">
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input type="text" matInput  placeholder="Enter First Name">
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input type="text" matInput  placeholder="Enter First Name">
+        </mat-form-field>
+      </div>      
+    </div>
   </div>
+
+  <app-file-upload [validExts]="validExts" [maxFileSizeInMB]="fileSizeInMB" (fileEmitEvent)="setFiles($event)" (fileContentEmitEvent)="setPreviewedData($event)"></app-file-upload>
+
+  <!-- <div class="ay-container"> 
+    
+    <div><mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput  placeholder="Enter First Name">
+    </mat-form-field></div>  
+    <div><mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput  placeholder="Enter First Name">
+    </mat-form-field></div>  
+    <div><mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput  placeholder="Enter First Name">
+    </mat-form-field></div>  
+  </div>
+  <div class="ay-container">  
+    <div>
+      <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput  placeholder="Enter First Name">
+    </mat-form-field>
+  </div>  
+    <div><mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput  placeholder="Enter First Name">
+    </mat-form-field></div>  
+    <div><mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput  placeholder="Enter First Name">
+    </mat-form-field></div>  
+    <div>
+  </div> -->

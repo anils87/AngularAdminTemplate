@@ -1,18 +1,18 @@
-<!-- <ng-container>
+ <ng-container>
     <mat-icon *ngIf="sidenavWidth==15" title="Collapse" style="float: right;" 
     (click)="toggleMenu.emit(false);" mat-list-icon>keyboard_arrow_left</mat-icon>
     <mat-icon *ngIf="sidenavWidth!=15" title="Expand" style="float: right;" 
     (click)="toggleMenu.emit(true);" mat-list-icon>keyboard_arrow_right</mat-icon>    
-</ng-container> -->
+</ng-container> 
 <ng-container>
     <button mat-icon-button *ngIf="mode === 'over'" (click)="toggle()">
         <mat-icon *ngIf="!opened">menu</mat-icon>
         <mat-icon *ngIf="opened">close</mat-icon>
       </button>
-    <!-- <mat-icon *ngIf="sidenavWidth==15" title="Collapse" style="float: right;" 
+     <!-- <mat-icon *ngIf="sidenavWidth==15" title="Collapse" style="float: right;" 
     (click)="toggleMenu.emit(false);" mat-list-icon>keyboard_arrow_left</mat-icon>
     <mat-icon *ngIf="sidenavWidth!=15" title="Expand" style="float: right;" 
-    (click)="toggleMenu.emit(true);" mat-list-icon>keyboard_arrow_right</mat-icon>     -->
+    (click)="toggleMenu.emit(true);" mat-list-icon>keyboard_arrow_right</mat-icon>  -->
 </ng-container>
 <mat-nav-list class="side-navnar">
     <ng-container *ngFor="let menu of menuList | async; index as i;">
@@ -24,7 +24,7 @@
 
 <ng-template #parentMenu let-menu="menu">
     <mat-list-item [routerLink]="menu.routerLink" routerLinkActive #rla="routerLinkActive" [routerLinkActiveOptions]="{exact:
-        true}">
+        false}">
         <mat-icon>{{menu.icon}}</mat-icon> 
         <ng-container *ngIf="sidenavWidth>6">
            <span class="menu-text-position menu-text" [ngClass]="{'menu-text-active': rla.isActive}"> {{menu.text}} </span>
@@ -48,7 +48,7 @@
                 </ng-container>
                 <ng-container *ngIf="submenu?.children?.length==0">
                     <mat-list-item [routerLink]="submenu.routerLink"  routerLinkActive #rla1="routerLinkActive"
-                    [routerLinkActiveOptions]="{exact: true}">
+                    [routerLinkActiveOptions]="{exact: false}">
                         <mat-icon>{{submenu.icon}}</mat-icon> <span class="menu-text-position menu-text"  [ngClass]="{'menu-text-active':rla1.isActive}">  {{submenu.text}}</span>
                     </mat-list-item>
                 </ng-container>
@@ -66,7 +66,7 @@
         </mat-expansion-panel-header>
         <mat-nav-list class="menu-child-container">
             <mat-list-item [routerLink]="submenu1.routerLink" *ngFor="let submenu1 of submenu.children" 
-            routerLinkActive #rlac="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">
+            routerLinkActive #rlac="routerLinkActive" [routerLinkActiveOptions]="{exact: false}">
                 <mat-icon>{{submenu1.icon}}</mat-icon> <span class="menu-text-position menu-text" [ngClass]="{'menu-text-active':rlac.isActive}"> {{submenu1.text}}</span>
             </mat-list-item>
         </mat-nav-list>

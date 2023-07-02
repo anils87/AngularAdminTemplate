@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IMenu } from '../../core/interfaces/imenu';
 import { MenuService } from '../../core/services/menu-service.service';
@@ -19,7 +19,8 @@ export class SideNavbarComponent {
   mode:any;
   opened:any;
   subMenuPath:string='';
-  constructor(private httpService: MenuService,private _layoutService:LayoutService) { 
+  constructor(private httpService: MenuService,private _layoutService:LayoutService
+    ,private cdr: ChangeDetectorRef) { 
     
   }
 
@@ -30,7 +31,8 @@ export class SideNavbarComponent {
     // console.log(this.inputSideNav);
     // console.log(this.inputSideNav.mode);
     // this.mode = this._layoutService.getMode();
-    // this.opened = this._layoutService.isOpened();
+     //this.opened = this._layoutService.isOpened();
+    this.cdr.detectChanges();
   }
   toggle(){
     this._layoutService.toggle();

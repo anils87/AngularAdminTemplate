@@ -1,17 +1,17 @@
 <mat-toolbar class="sidebar-toolbar">
     <!-- <mat-toolbar-row> -->
-        <div class="row col-12 col-md-12" >             
-                <div class="col-2 col-md-2">
+        <div class="row col-12" >             
+                <div class="col-2">
                     <img src="../../../../assets/img/company-logo.png" class="logo logo-responsive" >
                 </div>
-                <div class="col-6 col-md-6 header-title">
+                <div class="col-6 header-title">
                     <button mat-icon-button *ngIf="mode === 'over'" (click)="toggle()">
                         <mat-icon *ngIf="!isOpened">menu</mat-icon>
                         <mat-icon *ngIf="isOpened">close</mat-icon>
                     </button>
                     &nbsp;<span>{{componentTitle}}</span>    
                 </div>
-                <div class="col-4 col-md-4 user-profile" align="right">
+                <div class="col-4 user-profile" align="right">
                     <app-user-profile></app-user-profile>
                 </div>
             

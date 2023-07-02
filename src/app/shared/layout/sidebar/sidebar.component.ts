@@ -1,5 +1,5 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { LayoutService } from '../layout.service';
 
@@ -11,7 +11,8 @@ import { LayoutService } from '../layout.service';
 export class SidebarComponent {
   sidenavWidth = 15;  
   @ViewChild(MatSidenav) sidenav !: MatSidenav
-  constructor(private _observer: BreakpointObserver,private _layoutService:LayoutService){
+  constructor(private _observer: BreakpointObserver,private _layoutService:LayoutService
+    ,private cdr: ChangeDetectorRef){
 
   }
 ngAfterViewInit(){
@@ -26,9 +27,10 @@ ngAfterViewInit(){
       }                  
       this._layoutService.setSidenav(this.sidenav);
       this._layoutService.refreshService.next(true);
-    })
+    });
+    this.cdr.detectChanges();
   }
-  showHide(flag:Boolean){
+  showHide(flag:Boolean){    
     if(flag)
       this.increase();
     else

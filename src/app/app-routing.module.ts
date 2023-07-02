@@ -7,6 +7,7 @@ import { DataTableComponent } from './data-table/data-table.component';
 import { MatDataTableComponent } from './mat-data-table/mat-data-table.component';
 import { ResponsiveLayoutComponent } from './components/responsive-layout/responsive-layout.component';
 import { ProductsComponent } from './products/products.component';
+import { FileUploadComponent } from './shared/components/file-upload/file-upload.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
       },
       {
         path:'forms/responsive-layout',
+        component:ResponsiveLayoutComponent
+      },
+      {
+        path:'file-upload',
         component:ResponsiveLayoutComponent
       },
       {
