@@ -12,9 +12,12 @@ body {
     font-family: Rubik,"Helvetica Neue", sans-serif; 
 
 }
+
 ::marker {
     color: green;
     font-size: 30px;
+    content: "";
+    //list-style: none;
 }
 .example-full-width{
     width:100%;
