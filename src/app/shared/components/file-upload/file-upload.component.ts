@@ -6,7 +6,7 @@ export interface FileUploadDataTemplate{
   email:string;
 }
 
-const fileSizeInKB: number = 1024;
+const fileSizeInByte: number = 1048576;// size in byte for 1MB
 @Component({
   selector: 'app-file-upload',
   templateUrl: './file-upload.component.html',
@@ -89,7 +89,7 @@ export class FileUploadComponent {
     return true;
   }
   validateFileSize(file:File){
-    if(file.size <= (this.maxFileSizeInMB* fileSizeInKB))
+    if(file.size <= (this.maxFileSizeInMB* fileSizeInByte))
       return true;
     else
     return false;
